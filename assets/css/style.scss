@@ -1,0 +1,95 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Light counterpart of the profile page. Brand purple 530084 sits at roughly
+   10:1 on white, so unlike the dark build it is used for links unmodified. */
+
+:root {
+  color-scheme: light;
+  --surface: #ffffff;
+  --surface-raised: #f6f8fa;
+  --edge: #d0d7de;
+  --ink: #24292f;
+  --ink-strong: #1f2328;
+  --ink-muted: #57606a;
+  --brand: #530084;
+  --brand-link: #530084;
+}
+
+html,
+body {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+.markdown-body {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+.markdown-body a,
+.markdown-body a:visited {
+  color: var(--brand-link);
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus {
+  color: #7a1fbd;
+  text-decoration: underline;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  color: var(--ink-strong);
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom-color: var(--brand);
+}
+
+.markdown-body hr {
+  background-color: var(--brand);
+  border: 0;
+  height: 1px;
+}
+
+.markdown-body blockquote {
+  color: var(--ink-muted);
+  border-left-color: var(--brand);
+}
+
+.markdown-body pre,
+.markdown-body code,
+.markdown-body tt {
+  background-color: var(--surface-raised);
+  color: var(--ink);
+}
+
+.markdown-body pre > code {
+  background-color: transparent;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border-color: var(--edge);
+}
+
+.markdown-body table tr {
+  background-color: var(--surface);
+  border-top-color: var(--edge);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--surface-raised);
+}
+
+.markdown-body img {
+  background-color: transparent;
+}
